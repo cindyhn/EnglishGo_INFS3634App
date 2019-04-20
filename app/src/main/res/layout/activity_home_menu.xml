@@ -29,7 +29,7 @@
             android:layout_width="350dp"
             android:layout_height="1dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/PaleBlue"
+            app:cardBackgroundColor="@color/DarkerBlue"
             app:cardCornerRadius="20dp"
             app:cardUseCompatPadding="true"
             tools:layout_editor_absoluteX="38dp"
