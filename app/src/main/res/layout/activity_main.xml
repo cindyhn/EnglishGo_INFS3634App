@@ -1,16 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:layout_width="406dp"
+        android:layout_height="735dp"
+        android:background="@drawable/skybg"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/WordDayCard"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/White"
+            app:cardCornerRadius="20dp"
+
+
+            app:contentPadding="10dp" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/DictionaryCard"
+            android:layout_width="335dp"
+            android:layout_height="71dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/White"
+            app:cardCornerRadius="20dp"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="392dp">
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/QuizCard"
+            android:layout_width="335dp"
+            android:layout_height="5dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/White"
+            app:cardCornerRadius="20dp"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="214dp">
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="144dp"
+        android:text="Welcome!"
+        android:textColor="@color/White"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
