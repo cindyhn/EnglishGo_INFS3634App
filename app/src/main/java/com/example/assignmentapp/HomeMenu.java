@@ -35,15 +35,22 @@ public class HomeMenu extends AppCompatActivity implements View.OnClickListener 
         switch (v.getId()) {
             case R.id.CVQuizCard:
                 i = new Intent(this, QuizMenu.class); startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.CVWOTDCard:
                 i = new Intent(this, WOTD.class); startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.CVDictionaryCard:
                 i = new Intent(this, Dictionary.class); startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             default: break;
         }
 
     }
+
+
+
+
 }
