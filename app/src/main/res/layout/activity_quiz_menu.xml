@@ -4,22 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuizMenu"
-    android:background="@drawable/skybg">
+    android:background="@drawable/skybg"
+    tools:context=".QuizMenu">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="369dp"
-        android:layout_height="673dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="29dp"
-        android:alpha=".9"
-        app:cardBackgroundColor="@color/PaleBlue"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="0dp"
+
+    <ImageView
+        android:id="@+id/rectimage"
+        android:layout_width="403dp"
+        android:layout_height="644dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="11dp"
+        android:alpha=".95"
+        android:background="@color/Green"
+        android:src="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="343dp"
+        android:layout_height="85dp"
+        android:text="Word Association Quiz"
+        android:textAlignment="center"
+        android:textColor="@color/White"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="28dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="119dp"
+        android:layout_height="134dp"
+        app:srcCompat="@drawable/test"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <TextView
+        android:id="@+id/QuizTV"
+        android:layout_width="311dp"
+        android:layout_height="108dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="243dp"
+        tools:text="Test your vocabulary! Pick the word that doesn't match the rest" />
+
 </android.support.constraint.ConstraintLayout>
