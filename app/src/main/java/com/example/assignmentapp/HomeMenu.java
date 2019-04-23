@@ -42,7 +42,7 @@ public class HomeMenu extends AppCompatActivity implements View.OnClickListener 
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.CVVideoCard:
-                i = new Intent(this, Videos.class); startActivity(i);
+                i = new Intent(this, Additional_Resources_Menu.class); startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             default: break;

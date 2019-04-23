@@ -28,8 +28,9 @@
         <activity android:name=".WOTD"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".Dictionary"
+        <activity android:name=".Videos"
             android:screenOrientation="portrait"/>
+        <activity android:name=".Additional_Resources_Menu" />
 
 
 

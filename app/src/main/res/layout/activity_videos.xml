@@ -12,28 +12,71 @@
         android:id="@+id/rectimage"
         android:layout_width="403dp"
         android:layout_height="644dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:alpha=".95"
         android:background="@color/Purple"
         android:src="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"></ImageView>
+
+    <ImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="343dp"
         android:layout_height="85dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="Helpful Videos!"
         android:textAlignment="center"
         android:textColor="@color/White"
         android:textSize="30sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="28dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/rectimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <TextView
+        android:id="@+id/videoTitle"
+        android:layout_width="384dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Title"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thumbnail" />
+
+    <TextView
+        android:id="@+id/videoDescription"
+        android:layout_width="384dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoTitle" />
 
 </android.support.constraint.ConstraintLayout>
