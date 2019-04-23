@@ -4,7 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WOTD"
-    android:background="@drawable/skybg">
+    android:background="@drawable/skybg"
+    tools:context=".WOTD">
+
+
+    <ImageView
+        android:id="@+id/rectimage"
+        android:layout_width="403dp"
+        android:layout_height="644dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="11dp"
+        android:alpha=".95"
+        android:background="@color/colorAccent"
+        android:src="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="343dp"
+        android:layout_height="85dp"
+        android:text="Random Word"
+        android:textAlignment="center"
+        android:textColor="@color/White"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="28dp" />
 
 </android.support.constraint.ConstraintLayout>
