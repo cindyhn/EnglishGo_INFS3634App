@@ -10,7 +10,7 @@ public class HomeMenu extends AppCompatActivity implements View.OnClickListener 
     public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
 
-    private CardView quizCard, wotdCard, dictionaryCard;
+    private CardView quizCard, wotdCard, videoCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +20,12 @@ public class HomeMenu extends AppCompatActivity implements View.OnClickListener 
         //Defining Cards
         quizCard = (CardView) findViewById(R.id.CVQuizCard);
         wotdCard = (CardView) findViewById(R.id.CVWOTDCard);
-        dictionaryCard = (CardView) findViewById(R.id.CVDictionaryCard);
+        videoCard = (CardView) findViewById(R.id.CVVideoCard);
 
         //Adding OnClick Listener to Cards
         quizCard.setOnClickListener(this);
         wotdCard.setOnClickListener(this);
-        dictionaryCard.setOnClickListener(this);
+        videoCard.setOnClickListener(this);
     }
 
     @Override
@@ -41,8 +41,8 @@ public class HomeMenu extends AppCompatActivity implements View.OnClickListener 
                 i = new Intent(this, WOTD.class); startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
-            case R.id.CVDictionaryCard:
-                i = new Intent(this, Dictionary.class); startActivity(i);
+            case R.id.CVVideoCard:
+                i = new Intent(this, Videos.class); startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             default: break;
