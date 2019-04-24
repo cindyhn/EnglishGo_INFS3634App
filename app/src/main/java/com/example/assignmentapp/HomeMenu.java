@@ -13,7 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 
 public class HomeMenu extends AppCompatActivity implements View.OnClickListener {
-    public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
     private CardView quizCard, wotdCard, videoCard;
 
@@ -23,9 +22,9 @@ public class HomeMenu extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_home_menu);
 
         //Defining Cards
-        quizCard = (CardView) findViewById(R.id.CVQuizCard);
-        wotdCard = (CardView) findViewById(R.id.CVWOTDCard);
-        videoCard = (CardView) findViewById(R.id.CVVideoCard);
+        quizCard = findViewById(R.id.CVQuizCard);
+        wotdCard = findViewById(R.id.CVWOTDCard);
+        videoCard = findViewById(R.id.CVVideoCard);
 
 
         //Adding OnClick Listener to Cards
@@ -54,7 +53,7 @@ public class HomeMenu extends AppCompatActivity implements View.OnClickListener 
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.CVVideoCard:
-                i = new Intent(this, Additional_Resources_Menu.class);
+                i = new Intent(this, VideoMenu.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
@@ -64,24 +63,24 @@ public class HomeMenu extends AppCompatActivity implements View.OnClickListener 
 
     }
 
+        //Method is used when the information button is clicked to generate a pop-up window
     public void onButtonShowPopupWindowClick(View view) {
 
-        // inflate the layout of the popup window
+        // This inflates the layout of the popup window
         LayoutInflater inflater = (LayoutInflater)
                 getSystemService(LAYOUT_INFLATER_SERVICE);
         View popupView = inflater.inflate(R.layout.activity_pop_up_window, null);
 
-        // create the popup window
+        // This is the creation of the popup window
         int width = LinearLayout.LayoutParams.WRAP_CONTENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
-        boolean focusable = true; // lets taps outside the popup also dismiss it
+        boolean focusable = true; // Allows for taps outside the popup that dismiss the window
         final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
 
-        // show the popup window
-        // which view you pass in doesn't matter, it is only used for the window tolken
+        // Show the popup window
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
 
-        // dismiss the popup window when touched
+        // Dismiss the popup window when touched
         popupView.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
