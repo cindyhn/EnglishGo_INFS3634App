@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="500dp"
+    android:background="@color/White"
+    android:alpha=".9">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="20dp"
+        android:paddingRight="16dp"
+        android:text="This application was created by Apex Consulting to help non-native speakers to learn English."
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
