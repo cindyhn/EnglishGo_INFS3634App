@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Additional_Resources_Menu extends AppCompatActivity {
     private static final String TAG = "Additional_Resources_M";
 
-    static final String YOUTUBE_API_KEY = "AIzaSyCqwpllIfLUAZFWhvCWbPQqWVAY6KbOeZ8";
+   // static final String YOUTUBE_API_KEY = "AIzaSyCqwpllIfLUAZFWhvCWbPQqWVAY6KbOeZ8";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,6 @@ public class Additional_Resources_Menu extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.myListview);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(playVideo);
-
     }
 
     //set an listener for the video thumbnails to play
@@ -47,8 +46,8 @@ public class Additional_Resources_Menu extends AppCompatActivity {
             Toast.makeText(Additional_Resources_Menu.this, title, Toast.LENGTH_SHORT).show();
 
             //creates an intent for both the youtube app and default browser if no youtube app is available
-            Intent youtubeIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + url));
-            Intent altIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtube.com/watch?v=" + url));
+            Intent youtubeIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtube.com/watch?v=" + url)); //I swapped youtubeIntent and altIntent around
+            Intent altIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + url));
 
             //runs one or the other based on what is available via a try-catch block
             try {
