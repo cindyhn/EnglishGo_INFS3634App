@@ -32,9 +32,22 @@
             android:name=".WOTD"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Videos"
+            android:name=".ListeningVideos.ListeningVideos"
             android:screenOrientation="portrait" />
-        <activity android:name=".Additional_Resources_Menu" />
+        <activity android:name=".ListeningVideos.ListeningVideos_Resources_Menu" />
+        <activity
+            android:name=".SpeakingVideos.SpeakingVideos"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SpeakingVideos.SpeakingVideos_Resources_Menu" />
+        <activity
+            android:name=".WritingVideos.WritingVideos"
+            android:screenOrientation="portrait" />
+        <activity android:name=".WritingVideos.WritingVideos_Resources_Menu" />
+        <activity
+            android:name=".ReadingVideos.ReadingVideos"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ReadingVideos.ReadingVideos_Resources_Menu" />
+
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.assignmentapp;
+package com.example.assignmentapp.WritingVideos;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,26 +8,27 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+import com.example.assignmentapp.R;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class VideoAdapter extends ArrayAdapter<VideoDetails> {
+public class WritingVideoAdapter extends ArrayAdapter<WritingVideoDetails> {
 
-   public VideoAdapter(Context context, List<VideoDetails> items) {
-       super(context, 0, items);
-   }
+    public WritingVideoAdapter(Context context, List<WritingVideoDetails> items) {
+        super(context, 0, items);
+    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
         //get the video for this position
-        VideoDetails videoDetails = getItem(position);
+        WritingVideoDetails videoDetails = getItem(position);
 
         //check if an existing view is being reused? Otherwise inflate the view with this
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_videos,parent,false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_writing_videos,parent,false);
         }
 
         //create/find the imageview and two textviews from the xml file we're going to be using
@@ -45,3 +46,4 @@ public class VideoAdapter extends ArrayAdapter<VideoDetails> {
         return convertView;
     }
 }
+

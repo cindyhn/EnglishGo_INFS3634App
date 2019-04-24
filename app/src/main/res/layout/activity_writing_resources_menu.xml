@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Additional_Resources_Menu">
+    tools:context=".WritingVideos.WritingVideos_Resources_Menu">
 
-    <include layout="@layout/content_additional_resources_menu" />
+    <include layout="@layout/content_listening_listview_menu" />
 
 </android.support.design.widget.CoordinatorLayout>
