@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class VideoMenu extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView listeningCard, writingCard, readingCard, speakingCard;
+    public CardView listeningCard, writingCard, readingCard, speakingCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

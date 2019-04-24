@@ -30,7 +30,7 @@
             android:layout_height="1dp"
             android:layout_weight="1"
             app:cardBackgroundColor="@color/Green"
-            app:cardCornerRadius="15dp"
+            app:cardCornerRadius="10dp"
             app:cardUseCompatPadding="true"
             tools:layout_editor_absoluteX="38dp"
             tools:layout_editor_absoluteY="214dp">
@@ -71,7 +71,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             app:cardBackgroundColor="@color/colorAccent"
-            app:cardCornerRadius="15dp"
+            app:cardCornerRadius="10dp"
 
             app:cardUseCompatPadding="true"
 
@@ -112,7 +112,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             app:cardBackgroundColor="@color/Purple"
-            app:cardCornerRadius="15dp"
+            app:cardCornerRadius="10dp"
             app:cardUseCompatPadding="true"
             tools:layout_editor_absoluteX="38dp"
             tools:layout_editor_absoluteY="392dp">

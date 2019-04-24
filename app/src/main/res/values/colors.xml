@@ -8,7 +8,8 @@
     <color name="DarkerBlue">#1E82E0</color>
     <color name="BGBlue">#2A9FE4</color>
     <color name="SplashBG">#5E9DFF</color>
-    <color name="Green">#63C35E</color>
+    <color name="Green">#59B34C</color>
     <color name="Purple">#8453E0</color>
     <color name="LightPurple">#D7C9F2</color>
+    <color name="PaleGreen">#ACDFA9</color>
 </resources>

@@ -52,12 +52,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.653">
+        app:layout_constraintVertical_bias="0.746">
 
         <LinearLayout
             android:id="@+id/topRow"
             android:layout_width="379dp"
-            android:layout_height="wrap_content"
+            android:layout_height="218dp"
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="horizontal"
@@ -76,7 +76,8 @@
                 android:background="@color/LightPurple"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/LightPurple">
+                app:cardBackgroundColor="@color/LightPurple"
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -95,6 +96,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Listening"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
 
@@ -114,7 +116,8 @@
                 android:background="@color/LightPurple"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/LightPurple">
+                app:cardBackgroundColor="@color/LightPurple"
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -133,6 +136,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Speaking"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
 
@@ -144,7 +148,7 @@
         <LinearLayout
             android:id="@+id/bottomRow"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="242dp"
             android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -161,7 +165,8 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/LightPurple">
+                app:cardBackgroundColor="@color/LightPurple"
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -180,6 +185,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Reading"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
 
@@ -196,7 +202,8 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/LightPurple">
+                app:cardBackgroundColor="@color/LightPurple"
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -215,6 +222,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Writing"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
