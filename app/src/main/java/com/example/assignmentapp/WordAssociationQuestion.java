@@ -1,5 +1,6 @@
 package com.example.assignmentapp;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class WordAssociationQuestion extends AppCompatActivity {
+
+    public static final String EXT_SCORE = "extraScore";
 
     private TextView textQuestion;
     private TextView textScore;
@@ -93,7 +96,7 @@ public class WordAssociationQuestion extends AppCompatActivity {
             RB2.setText(currentQuestion.getOption2());
 
             questionNo++;
-            textQuestionNo.setText("You're on Question " + questionNo + "out of" + questionTotal);
+            textQuestionNo.setText("Question " + questionNo + " out of " + questionTotal);
             answered = false;
             buttonSubmit.setText("Submit");
 
@@ -112,7 +115,7 @@ public class WordAssociationQuestion extends AppCompatActivity {
 
         if (answerNr == currentQuestion.getAnswerNo()) {
             score++;
-            textScore.setText("Score: " + score);
+            textScore.setText("SCORE: " + score);
         }
 
         showSolution();
@@ -127,6 +130,7 @@ public class WordAssociationQuestion extends AppCompatActivity {
                 RB1.setTextColor(Color.GREEN);
                 textQuestion.setText("Answer 1 is correct");
                 break;
+
             case 2:
                 RB2.setTextColor(Color.GREEN);
                 textQuestion.setText("Answer 2 is correct");
@@ -139,7 +143,14 @@ public class WordAssociationQuestion extends AppCompatActivity {
             buttonSubmit.setText("Finish");
         }
     }
-        private void finishWordAssociationQuiz() {
+
+    //Send results back to starting screen activity
+    //Pass ext_score constant and pass result
+
+    private void finishWordAssociationQuiz() {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra(EXT_SCORE, score);
+        setResult(RESULT_OK, resultIntent);
         finish();
         }
     }

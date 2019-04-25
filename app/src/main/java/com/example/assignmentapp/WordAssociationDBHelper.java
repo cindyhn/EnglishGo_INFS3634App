@@ -50,15 +50,15 @@ public class WordAssociationDBHelper extends SQLiteOpenHelper {
     //Creating question objects using WordAssociationQandA class
     //addQuestion method used to insert values into database
     private void fillQuestionsTable() {
-        WordAssociationQandA q1 = new WordAssociationQandA("A is correct", "A", "B", 1);
+        WordAssociationQandA q1 = new WordAssociationQandA("Legacy, Family, Ethnic", "Gather", "Heritage", 2);
         addQuestion(q1);
-        WordAssociationQandA q2 = new WordAssociationQandA("B is correct", "A", "B", 2);
+        WordAssociationQandA q2 = new WordAssociationQandA("Small, Decrease, Reduction", "Minimise", "Convince", 1);
         addQuestion(q2);
-        WordAssociationQandA q3 = new WordAssociationQandA("A is correct", "A", "B", 3);
+        WordAssociationQandA q3 = new WordAssociationQandA("Fast, Quick, Prompt", "Swift", "Command", 1);
         addQuestion(q3);
-        WordAssociationQandA q4 = new WordAssociationQandA("A is correct again", "A", "B", 1);
+        WordAssociationQandA q4 = new WordAssociationQandA("Make, Create, Factory", "Productive", "Rehabilitation", 1);
         addQuestion(q4);
-        WordAssociationQandA q5 = new WordAssociationQandA("B is correct again", "A", "B", 2);
+        WordAssociationQandA q5 = new WordAssociationQandA("Unfamiliar, Peculiar, Strange", "Unique", "Weird", 2);
         addQuestion(q5);
     }
 
