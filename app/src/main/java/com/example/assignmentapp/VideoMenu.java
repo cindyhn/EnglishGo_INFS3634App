@@ -5,7 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.TextView;
+
+import com.example.assignmentapp.ListeningVideos.ListeningVideos_Resources_Menu;
+import com.example.assignmentapp.ReadingVideos.ReadingVideos_Resources_Menu;
+import com.example.assignmentapp.SpeakingVideos.SpeakingVideos_Resources_Menu;
+import com.example.assignmentapp.WritingVideos.WritingVideos_Resources_Menu;
 
 public class VideoMenu extends AppCompatActivity implements View.OnClickListener {
 
@@ -39,22 +43,22 @@ public class VideoMenu extends AppCompatActivity implements View.OnClickListener
         //Also overriding the upward motion transition that occurs, with a horizontal slide to add natural flow
         switch (v.getId()) {
             case R.id.CVListening:
-                i = new Intent(this, Additional_Resources_Menu.class);
+                i = new Intent(this, ListeningVideos_Resources_Menu.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.CVReading:
-                i = new Intent(this, Additional_Resources_Menu.class);
+                i = new Intent(this, ReadingVideos_Resources_Menu.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.CVWriting:
-                i = new Intent(this, Additional_Resources_Menu.class);
+                i = new Intent(this, WritingVideos_Resources_Menu.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
             case R.id.CVSpeaking:
-                i = new Intent(this, Additional_Resources_Menu.class);
+                i = new Intent(this, SpeakingVideos_Resources_Menu.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
