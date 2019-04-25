@@ -19,7 +19,6 @@ public class WritingVideos_Resources_Menu extends AppCompatActivity {
     private static final String TAG = "Additional_Resources_M";
 
     public static final String YOUTUBE_API_KEY = "AIzaSyD3V-DYkbWzbHajYyZPFL8eh_yFPgGoZoU";
-
     public static String getApiKey(){
         return YOUTUBE_API_KEY;
     }

@@ -18,6 +18,11 @@ import java.util.ArrayList;
 public class ListeningVideos_Resources_Menu extends AppCompatActivity {
     private static final String TAG = "Additional_Resources_M";
 
+    public static final String YOUTUBE_API_KEY = "AIzaSyD3V-DYkbWzbHajYyZPFL8eh_yFPgGoZoU";
+    public static String getApiKey(){
+        return YOUTUBE_API_KEY;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
