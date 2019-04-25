@@ -11,8 +11,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.example.assignmentapp.R;
-import com.example.assignmentapp.SpeakingVideos.SpeakingVideoAdapter;
-import com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails;
 import com.example.assignmentapp.VideoMenu;
 
 import java.util.ArrayList;
@@ -20,7 +18,7 @@ import java.util.ArrayList;
 public class WritingVideos_Resources_Menu extends AppCompatActivity {
     private static final String TAG = "Additional_Resources_M";
 
-    public static final String YOUTUBE_API_KEY = "AIzaSyCqwpllIfLUAZFWhvCWbPQqWVAY6KbOeZ8";
+    public static final String YOUTUBE_API_KEY = "AIzaSyD3V-DYkbWzbHajYyZPFL8eh_yFPgGoZoU";
 
     public static String getApiKey(){
         return YOUTUBE_API_KEY;

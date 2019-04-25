@@ -37,9 +37,14 @@ public class ReadingVideoDetails {
 
     //array list containing the video and details
     private static ArrayList<ReadingVideoDetails> myVideos = new ArrayList<ReadingVideoDetails>() {{
-        add(new ReadingVideoDetails(1, "Testing reading", "vBkqn0RpbUk&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi"));
-        add(new ReadingVideoDetails(2, "Advanced Listening English Conversation - Listening English Lesson 2", "H0ziWyTLd_c&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi&index=2"));
-        add(new ReadingVideoDetails(3, "Advanced Listening English Conversation - Listening English Lesson 3", "_hkIVzHTDek&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi&index=3"));
+        add(new ReadingVideoDetails(1, "English Passages for Reading and Listening", "t5qrRALIyko"));
+        add(new ReadingVideoDetails(2, "Reading and Understanding - practice English", "HIFzQdKcGNg"));
+        add(new ReadingVideoDetails(3, "TOEFL Reading Strategy for Detail Questions", "m7gspetfUww"));
+        add(new ReadingVideoDetails(4, "TOEFL Reading Skill 1: Summarize Information with Jay!", "igxu4xvta4c"));
+        add(new ReadingVideoDetails(5, "TOEFL Reading Skill 2: Guess Vocabulary from Context with Jay!", "whOoDpXFH9A"));
+        add(new ReadingVideoDetails(6, "TOEFL Reading Skill 3: Inference with Jay!", "EsMbzhw_wn4"));
+        add(new ReadingVideoDetails(7, "TOEFL Reading Skill 4: Reference with Jay!", "zOr4mtCxu4A"));
+        add(new ReadingVideoDetails(8, "TOEFL Practice Test - Reading Section (2019)", "72iwMaJ_ScI"));
     }};
 
     //getter for the array

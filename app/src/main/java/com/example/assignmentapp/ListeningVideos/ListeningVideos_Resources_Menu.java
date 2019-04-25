@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import com.example.assignmentapp.R;
 import com.example.assignmentapp.VideoMenu;
 
@@ -18,12 +17,6 @@ import java.util.ArrayList;
 
 public class ListeningVideos_Resources_Menu extends AppCompatActivity {
     private static final String TAG = "Additional_Resources_M";
-
-    public static final String YOUTUBE_API_KEY = "AIzaSyCqwpllIfLUAZFWhvCWbPQqWVAY6KbOeZ8";
-
-    public static String getApiKey(){
-        return YOUTUBE_API_KEY;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +58,7 @@ public class ListeningVideos_Resources_Menu extends AppCompatActivity {
         }
     };
 
-    //takes it back to the home screen rather than go home
+    //takes it back to the VideoMenu, rather than youtube Home
     public void onBackPressed() {
         Intent intent = new Intent(this, VideoMenu.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

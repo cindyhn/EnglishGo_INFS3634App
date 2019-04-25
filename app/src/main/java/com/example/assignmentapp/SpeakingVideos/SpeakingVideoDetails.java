@@ -37,9 +37,14 @@ public class SpeakingVideoDetails {
 
     //array list containing the video and details
     private static ArrayList<com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails> myVideos = new ArrayList<com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails>() {{
-        add(new com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails(1, "Testing speaking", "vBkqn0RpbUk&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi"));
-        add(new com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails(2, "Advanced Listening English Conversation - Listening English Lesson 2", "H0ziWyTLd_c&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi&index=2"));
-        add(new com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails(3, "Advanced Listening English Conversation - Listening English Lesson 3", "_hkIVzHTDek&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi&index=3"));
+        add(new SpeakingVideoDetails(1, "Speaking English Practice Conversation - Questions and Answers English Conversation", "XVQlnP5Yu2A"));
+        add(new SpeakingVideoDetails(2, "English Speaking Practice - 501 Most Common Questions and Answers in English", "ccAKVt2x_PQ"));
+        add(new SpeakingVideoDetails(3, "Spoken English Leaning Video", "IhQt_fxGOcw"));
+        add(new SpeakingVideoDetails(4, "Slow and Easy English Conversation Practice", "4IkM_Hb2B-A"));
+        add(new SpeakingVideoDetails(5, "1000 Useful Expressions in English - Learn English Speaking", "r0npU0D51OA"));
+        add(new SpeakingVideoDetails(6, "Basic English Conversation Practice | English Listening and Speaking Practice", "QGarmmz2S78"));
+        add(new SpeakingVideoDetails(7, "TOEFL Speaking Practice Test", "INYFYq_D_Xc"));
+        add(new SpeakingVideoDetails(8, "TOEFL Practice Test - The Speaking Section (2019))", "7a3W861_EiA"));
     }};
 
     //getter for the array

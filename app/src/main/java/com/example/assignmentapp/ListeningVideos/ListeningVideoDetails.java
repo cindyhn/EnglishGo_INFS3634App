@@ -37,9 +37,15 @@ public class ListeningVideoDetails {
 
     //array list containing the video and details
     private static ArrayList<ListeningVideoDetails> myVideos = new ArrayList<ListeningVideoDetails>() {{
-        add(new ListeningVideoDetails(1, "Advanced Listening English Conversation - Listening English Lesson 1", "vBkqn0RpbUk&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi"));
-        add(new ListeningVideoDetails(2, "Advanced Listening English Conversation - Listening English Lesson 2", "H0ziWyTLd_c&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi&index=2"));
-        add(new ListeningVideoDetails(3, "Advanced Listening English Conversation - Listening English Lesson 3", "_hkIVzHTDek&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi&index=3"));
+        add(new ListeningVideoDetails(1, "Advanced Listening English Conversation - Listening English Lesson 1", "vBkqn0RpbUk"));
+        add(new ListeningVideoDetails(2, "Advanced Listening English Conversation - Listening English Lesson 2", "H0ziWyTLd_c"));
+        add(new ListeningVideoDetails(3, "Advanced Listening English Conversation - Listening English Lesson 3", "_hkIVzHTDek"));
+        add(new ListeningVideoDetails(4, "English Listening Practice - Learn English Listening Comprehension", "qYb0LCqqJbU"));
+        add(new ListeningVideoDetails(5, "English Listening Practice Level 2 - Learn English Listening With Subtitle", "64DApbWVaLI"));
+        add(new ListeningVideoDetails(6, "English Listening Practice Level 3 - Listening English Comprehension with Subtitle", "64DApbWVaLI"));
+        add(new ListeningVideoDetails(7, "English Listening Practice Level 4 - Learn English By Listening With Subtitle", "l3wC49vEYRg"));
+        add(new ListeningVideoDetails(8, "TOEFL Practice Test - The Listening Section (2019)", "X1fi29olrc4"));
+
     }};
 
     //getter for the array

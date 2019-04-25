@@ -47,6 +47,10 @@
             android:name=".ReadingVideos.ReadingVideos"
             android:screenOrientation="portrait" />
         <activity android:name=".ReadingVideos.ReadingVideos_Resources_Menu" />
+        <activity
+            android:name=".testYoutube.test"
+            android:screenOrientation="portrait" />
+
 
     </application>
 
