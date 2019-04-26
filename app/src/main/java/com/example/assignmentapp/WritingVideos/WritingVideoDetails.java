@@ -35,7 +35,7 @@ public class WritingVideoDetails {
     }
 
 
-    //array list containing the video and details
+    //Array list containing video details and url
     private static ArrayList<com.example.assignmentapp.WritingVideos.WritingVideoDetails> myVideos = new ArrayList<com.example.assignmentapp.WritingVideos.WritingVideoDetails>() {{
         add(new WritingVideoDetails(1, "5 tips to improve your writing", "GgkRoYPLhts"));
         add(new WritingVideoDetails(2, "Learn English Grammar: The Sentence", "4dr5lN1jqRE"));
@@ -47,12 +47,12 @@ public class WritingVideoDetails {
         add(new WritingVideoDetails(8, "How to Improve English Grammar - Tips to Learn English Grammar Faster", "A5uz6LWeLPM"));
     }};
 
-    //getter for the array
+    //Getter method for the array
     public static ArrayList<com.example.assignmentapp.WritingVideos.WritingVideoDetails> getMyVideos() {
         return myVideos;
     }
 
-    // getter for a specific item by index
+    //Getter method for a specific index item in the array
     public static com.example.assignmentapp.WritingVideos.WritingVideoDetails getVideoById(int id) {
         for (com.example.assignmentapp.WritingVideos.WritingVideoDetails video : myVideos) {
             if(video.getVideoId() == id) {

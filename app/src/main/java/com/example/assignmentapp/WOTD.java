@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class WOTD extends AppCompatActivity {
 
-    //declare variables from activity_wotd
+    //Declare variables from activity_wotd
     private Button generateWordBtn;
     private TextView wordTV;
     private WordsDB wordsDB = new WordsDB();
@@ -20,7 +20,7 @@ public class WOTD extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wotd);
 
-        //assigning widgets from xml file to corresponding variables above
+        //Assigning widgets from xml file to corresponding variables above
         generateWordBtn = (Button) findViewById(R.id.generateWordBtn);
         wordTV = (TextView) findViewById(R.id.wordTV);
 

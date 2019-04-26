@@ -22,24 +22,24 @@ public class ListeningVideoAdapter extends ArrayAdapter<ListeningVideoDetails> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
-        //get the video for this position
+        //Retrieve the video for this position using 'get' method
         ListeningVideoDetails videoDetails = getItem(position);
 
-        //check if an existing view is being reused? Otherwise inflate the view with this
+        //Inflate the view
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_listening_videos,parent,false);
         }
 
-        //create/find the imageview and two textviews from the xml file we're going to be using
+        //Assigning widgets from xml file to corresponding variables above
         ImageView videoThumbnail = (ImageView) convertView.findViewById(R.id.thumbnail);
         TextView title = (TextView) convertView.findViewById(R.id.videoTitle);
 
-        //set the image using the youtube video url using Picasso API
+        //Set the thumbnail image of the youtube video url using Picasso API
         String url = videoDetails.getVideoUrl();
         String imageUrl = "https://img.youtube.com/vi/" + url + "/0.jpg";
         Picasso.with(getContext()).load(imageUrl).into(videoThumbnail);
 
-        //set the title
+        //Set the title
         title.setText(videoDetails.getVideoTitle());
 
         return convertView;

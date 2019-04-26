@@ -35,7 +35,7 @@ public class SpeakingVideoDetails {
     }
 
 
-    //array list containing the video and details
+    //Array list containing video details and url
     private static ArrayList<com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails> myVideos = new ArrayList<com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails>() {{
         add(new SpeakingVideoDetails(1, "Speaking English Practice Conversation - Questions and Answers English Conversation", "XVQlnP5Yu2A"));
         add(new SpeakingVideoDetails(2, "English Speaking Practice - 501 Most Common Questions and Answers in English", "ccAKVt2x_PQ"));
@@ -47,12 +47,12 @@ public class SpeakingVideoDetails {
         add(new SpeakingVideoDetails(8, "TOEFL Practice Test - The Speaking Section (2019))", "7a3W861_EiA"));
     }};
 
-    //getter for the array
+    //Getter method for the array
     public static ArrayList<com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails> getMyVideos() {
         return myVideos;
     }
 
-    // getter for a specific item by index
+    //Getter method for a specific index item in the array
     public static com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails getVideoById(int id) {
         for (com.example.assignmentapp.SpeakingVideos.SpeakingVideoDetails video : myVideos) {
             if(video.getVideoId() == id) {

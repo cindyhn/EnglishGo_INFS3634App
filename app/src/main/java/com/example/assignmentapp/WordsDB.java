@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class WordsDB {
 
+    //String of all words and definitions
     static String getWord() {
         String[] words = {"ADORN\n\n Definition: To add beauty and decorate",
                 "UBIQUITOUS\n\n Definition: Present everywhere",
@@ -23,9 +24,9 @@ public class WordsDB {
                 "HYGIENE\n\n Definition: Conditions or practices conducive to maintaining health and preventing disease",
         };
 
+        //Generates random word to be returned to WOTD activity
         Random r = new Random();
         int num = r.nextInt(words.length);
-        return words[num]; //returns random fact to WOTD activity
-
+        return words[num];
     }
 }
