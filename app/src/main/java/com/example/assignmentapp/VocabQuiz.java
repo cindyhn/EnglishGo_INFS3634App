@@ -8,6 +8,8 @@ import android.widget.Button;
 
 public class VocabQuiz extends AppCompatActivity {
 
+    //Starting page for the Vocab quiz
+    //Contains the instructions and button/intent to start the actual quiz questions in the VocabQuizQuestion.class
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,11 +1,11 @@
-package com.example.assignmentapp;
+package com.example.assignmentapp.WordAssociation;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import com.example.assignmentapp.WordAssociationContainer.*;
+import com.example.assignmentapp.WordAssociation.WordAssociationContainer.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +49,7 @@ public class WordAssociationDBHelper extends SQLiteOpenHelper {
     }
 
     //Creating question objects using WordAssociationQandA class
+    //Question Bank of 50 questions
     //addQuestion method used to insert values into database
     private void fillQuestionsTable() {
         WordAssociationQandA q1 = new WordAssociationQandA("Legacy, Family, Ethnic", "Gather", "Heritage", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
@@ -89,7 +90,7 @@ public class WordAssociationDBHelper extends SQLiteOpenHelper {
         addQuestion(q18);
         WordAssociationQandA q19 = new WordAssociationQandA("Shop, Manager, Host", "Florist", "Subsequently", 1, WordAssociationQandA.DIFFICULTY_EASY);
         addQuestion(q19);
-        WordAssociationQandA q20 = new WordAssociationQandA("Famous, Important, Outstanding", "Prominent", "Overcome", 1, WordAssociationQandA.DIFFICULTY_HARD);
+        WordAssociationQandA q20 = new WordAssociationQandA("Famous, Important, Outstanding", "Prominent", "Overcome", 1, WordAssociationQandA.DIFFICULTY_MEDIUM);
         addQuestion(q20);
         WordAssociationQandA q21 = new WordAssociationQandA("Assume, Insight, Weather", "Forecast", "Peer", 1, WordAssociationQandA.DIFFICULTY_MEDIUM);
         addQuestion(q21);
@@ -111,11 +112,11 @@ public class WordAssociationDBHelper extends SQLiteOpenHelper {
         addQuestion(q29);
         WordAssociationQandA q30 = new WordAssociationQandA("Cheap, Poor, Weak", "Shoddy", "Paddock", 1, WordAssociationQandA.DIFFICULTY_EASY);
         addQuestion(q30);
-        WordAssociationQandA q31 = new WordAssociationQandA("Criminal, Cattle, Unlawful", "Customarily", "Bandit", 2, WordAssociationQandA.DIFFICULTY_HARD);
+        WordAssociationQandA q31 = new WordAssociationQandA("Criminal, Cattle, Unlawful", "Customarily", "Bandit", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
         addQuestion(q31);
-        WordAssociationQandA q32 = new WordAssociationQandA("Burn, Light, Flame", "Glow", "Enrol", 1, WordAssociationQandA.DIFFICULTY_HARD);
+        WordAssociationQandA q32 = new WordAssociationQandA("Burn, Light, Flame", "Glow", "Enrol", 1, WordAssociationQandA.DIFFICULTY_MEDIUM);
         addQuestion(q32);
-        WordAssociationQandA q33 = new WordAssociationQandA("Fine, Money, Jail", "Cube", "Bail", 2, WordAssociationQandA.DIFFICULTY_HARD);
+        WordAssociationQandA q33 = new WordAssociationQandA("Fine, Money, Jail", "Cube", "Bail", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
         addQuestion(q33);
         WordAssociationQandA q34 = new WordAssociationQandA("Convert, Switch, Change", "Articulate", "Diversion", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
         addQuestion(q34);
@@ -127,10 +128,30 @@ public class WordAssociationDBHelper extends SQLiteOpenHelper {
         addQuestion(q37);
         WordAssociationQandA q38 = new WordAssociationQandA("Agree, Correspond, Comply", "Overflow", "Conformance", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
         addQuestion(q38);
-        WordAssociationQandA q39 = new WordAssociationQandA("Emergence, Appearance, Rise", "Inception", "Checklist", 1, WordAssociationQandA.DIFFICULTY_MEDIUM);
+        WordAssociationQandA q39 = new WordAssociationQandA("Emergence, Appearance, Rise", "Inception", "Checklist", 1, WordAssociationQandA.DIFFICULTY_HARD);
         addQuestion(q39);
         WordAssociationQandA q40 = new WordAssociationQandA("Amiable, Friendly, Cheerful", "Menace", "Welcoming", 2, WordAssociationQandA.DIFFICULTY_EASY);
         addQuestion(q40);
+        WordAssociationQandA q41 = new WordAssociationQandA("Travel, Recreation, Entertainment", "Coat", "Leisure", 2, WordAssociationQandA.DIFFICULTY_EASY);
+        addQuestion(q41);
+        WordAssociationQandA q42 = new WordAssociationQandA("Scope, Light, Range", "Spectrum", "Loud", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
+        addQuestion(q42);
+        WordAssociationQandA q43 = new WordAssociationQandA("Math, Equation, Rule", "Formula", "Prospective", 1, WordAssociationQandA.DIFFICULTY_EASY);
+        addQuestion(q43);
+        WordAssociationQandA q44 = new WordAssociationQandA("Instead, Substitute, Agent", "Earnings", "Proxy", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
+        addQuestion(q44);
+        WordAssociationQandA q45 = new WordAssociationQandA("Education, Training, Exercise", "Excellence", "Discipline", 2, WordAssociationQandA.DIFFICULTY_EASY);
+        addQuestion(q45);
+        WordAssociationQandA q46 = new WordAssociationQandA("Change, Conversion, Revision", "Amendment", "Unfamiliar", 1, WordAssociationQandA.DIFFICULTY_MEDIUM);
+        addQuestion(q46);
+        WordAssociationQandA q47 = new WordAssociationQandA("Laugh, Enjoy, Comedy", "Despair", "Amusement", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
+        addQuestion(q47);
+        WordAssociationQandA q48 = new WordAssociationQandA("Degrading, Humiliating, Shame", "Ignominious", "Sartorial", 1, WordAssociationQandA.DIFFICULTY_HARD);
+        addQuestion(q48);
+        WordAssociationQandA q49 = new WordAssociationQandA("Hatred, Loating, Abhorrence", "Odium", "Lexicography", 1, WordAssociationQandA.DIFFICULTY_HARD);
+        addQuestion(q49);
+        WordAssociationQandA q50 = new WordAssociationQandA("Extra, Spare, Surplus", "Exultant", "Supernumerary", 2, WordAssociationQandA.DIFFICULTY_HARD);
+        addQuestion(q50);
     }
 
     //To insert the question into the database using ContentValues class

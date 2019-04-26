@@ -1,4 +1,4 @@
-package com.example.assignmentapp;
+package com.example.assignmentapp.WordAssociation;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +9,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.assignmentapp.R;
+
+// Code from the WordAssociation activity and associated classes used CodingInFlow's as a base and adapted it
+// There are differences from the original source code to suit the application and it's preferred layout
+// https://www.youtube.com/watch?v=vqIQ2AJqpg4
+// https://codinginflow.com/tutorials/android/quiz-app-with-sqlite/part-10-select-difficulty-level
 
 public class WordAssociation extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.assignmentapp;
+package com.example.assignmentapp.WordAssociation;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -12,6 +12,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.assignmentapp.R;
 
 import java.util.Collections;
 import java.util.List;
@@ -190,12 +192,10 @@ public class WordAssociationQuestion extends AppCompatActivity {
         switch (currentQuestion.getAnswerNo()) {
             case 1:
                 RB1.setTextColor(Color.GREEN);
-              //  textQuestion.setText("Answer 1 is correct");
                 break;
 
             case 2:
                 RB2.setTextColor(Color.GREEN);
-              //  textQuestion.setText("Answer 2 is correct");
                 break;
         }
 

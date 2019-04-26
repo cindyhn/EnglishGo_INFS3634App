@@ -2,6 +2,7 @@ package com.example.assignmentapp;
 
 public class VocabDatabase {
 
+    //Database for the hardcoded vocabulary/grammar quiz
     public static String[] questions = {
             "What is the plural of fish?",
             "What is adverb of quick?",

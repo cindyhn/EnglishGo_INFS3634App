@@ -8,7 +8,11 @@ import android.os.Bundle;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 4000;
+    //Splash screen that appears before the home menu
+    //Used the code in this video as a basis https://www.youtube.com/watch?v=jXtof6OUtcE
+
+    //Appears for 3 seconds
+    private static int SPLASH_TIME_OUT = 3000;
 
 
     @Override

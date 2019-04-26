@@ -1,4 +1,4 @@
-package com.example.assignmentapp;
+package com.example.assignmentapp.WordAssociation;
 
 public class  WordAssociationQandA {
 

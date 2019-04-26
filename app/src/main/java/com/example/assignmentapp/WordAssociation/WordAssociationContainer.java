@@ -1,9 +1,10 @@
-package com.example.assignmentapp;
+package com.example.assignmentapp.WordAssociation;
 
 import android.provider.BaseColumns;
 
 public final class WordAssociationContainer {
 
+    //Class that defines all the columns needed for the SQLite database used for the quiz
     private WordAssociationContainer() {}
 
     public static class QuestionsTable implements BaseColumns {

@@ -31,6 +31,7 @@ public class VocabQuizQuestion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocab_quiz_question);
 
+        //Defining the buttons, text views and edit answer items
         buttonNext = findViewById(R.id.BTVSubmit);
         textVQuestion = findViewById(R.id.TVVQuestion);
         editAnswer = findViewById(R.id.ETAnswer);
@@ -56,13 +57,13 @@ public class VocabQuizQuestion extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                //Checks if the answer inputted is correct
+                //Checks if the answer inputted is correct (whilst the user is inputting their questions)
                 if (editAnswer.getText().toString().equalsIgnoreCase(questions.get(currentQuestion).getAnswer())){
                     //Makes next button visible if it is correct
                     buttonNext.setVisibility(View.VISIBLE);
                 } else {
                     //Not visible when incorrect
-                    Toast.makeText(VocabQuizQuestion.this, "Not quite there yet! Keep trying!" +
+                    Toast.makeText(VocabQuizQuestion.this, "Almost there!" +
                             "", Toast.LENGTH_SHORT).show();
                     buttonNext.setVisibility(View.INVISIBLE);
 
@@ -75,6 +76,7 @@ public class VocabQuizQuestion extends AppCompatActivity {
             }
         });
 
+        //Loop to ensure all questions are shown to the user
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
