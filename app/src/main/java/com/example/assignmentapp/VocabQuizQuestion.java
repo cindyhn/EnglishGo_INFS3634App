@@ -90,6 +90,7 @@ public class VocabQuizQuestion extends AppCompatActivity {
                    //If no more questions - game over
                     Toast.makeText(VocabQuizQuestion.this, "Your vocab and grammar are on par!", Toast.LENGTH_SHORT).show();
                     finish();
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                 }
         }
 

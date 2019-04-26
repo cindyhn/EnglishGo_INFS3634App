@@ -57,12 +57,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VideoTV" />
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="199dp"
+        android:layout_height="325dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/vocabinstructions"
+        app:layout_constraintBottom_toTopOf="@+id/BTPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.626" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="129dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectimage"
+        app:layout_constraintEnd_toEndOf="@+id/rectimage"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="@+id/rectimage"
+        app:layout_constraintTop_toTopOf="@+id/rectimage"
+        app:layout_constraintVertical_bias="0.665"
+        app:srcCompat="@drawable/demoarrow" />
+
     <Button
         android:id="@+id/BTPlay"
         android:layout_width="122dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="416dp"
+        android:layout_marginTop="408dp"
         android:layout_marginEnd="8dp"
         android:text="PLAY"
         android:textColor="@color/Yellow"
@@ -71,25 +99,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/TVHighscore"
-        android:layout_width="177dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Current High Score: 0"
-        android:textColor="@color/White"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/rectimage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.134"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BTPlay"
-        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

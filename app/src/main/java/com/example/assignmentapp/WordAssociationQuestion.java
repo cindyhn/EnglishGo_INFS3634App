@@ -71,10 +71,14 @@ public class WordAssociationQuestion extends AppCompatActivity {
         textColourDefault = RB1.getTextColors();
         textColourDefaultTimer = textTimer.getTextColors();
 
+        Intent intent = getIntent();
+        String difficulty = intent.getStringExtra(WordAssociation.EXTRA_DIFFICULTY);
+
+        //Collecting the questions from the database class, shuffling and picking 5
         WordAssociationDBHelper dbHelper = new WordAssociationDBHelper(this);
-        questionList = dbHelper.getQuestions("Medium");
-        questionTotal = questionList.size();
+        questionList = dbHelper.getQuestions(difficulty);
         Collections.shuffle(questionList);
+        questionTotal = 5;//questionList.size();
 
         showNextQuestion();
 
@@ -95,7 +99,9 @@ public class WordAssociationQuestion extends AppCompatActivity {
     }
 
 
+
     private void showNextQuestion() {
+        //Setting radio buttons to default colour and reverting radioGroup back to initial state
         RB1.setTextColor(textColourDefault);
         RB2.setTextColor(textColourDefault);
         radioGroup.clearCheck();
@@ -117,11 +123,15 @@ public class WordAssociationQuestion extends AppCompatActivity {
 
         } else {
             finishWordAssociationQuiz();
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+
 
         }
     }
 
     private void startCountDown() {
+        //Countdown timer decreasing by a second as time passes
+
         countDownTimer = new CountDownTimer(timeLeftInMillis, 1000) {
             @Override
             //OnTick method will be called every second (because of the line above)

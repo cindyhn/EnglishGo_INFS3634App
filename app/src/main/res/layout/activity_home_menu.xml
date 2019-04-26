@@ -59,7 +59,7 @@
                     android:paddingLeft="16dp"
                     android:paddingTop="1dp"
                     android:paddingRight="16dp"
-                    android:text="A word association quiz to help your English proficiency"
+                    android:text="Two different quizzes to test and help improve your English!"
                     android:textColor="@color/White" />
             </LinearLayout>
 

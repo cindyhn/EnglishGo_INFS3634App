@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/rectimage"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -89,7 +89,7 @@
                         android:layout_width="81dp"
                         android:layout_height="80dp"
                         android:padding="10dp"
-                        android:src="@drawable/hear" />
+                        android:src="@drawable/blocks" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -99,6 +99,15 @@
                         android:textColor="@color/White"
                         android:textSize="20sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Pick the word that matches the rest"
+                        android:textColor="@color/White"
+                        android:textSize="17sp" />
 
 
                 </LinearLayout>
@@ -131,7 +140,7 @@
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="351dp"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -140,16 +149,26 @@
                         android:layout_width="75dp"
                         android:layout_height="79dp"
                         android:padding="10dp"
-                        android:src="@drawable/write" />
+                        android:src="@drawable/grammar" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Vocabulary"
+                        android:text="Vocabulary and Grammar"
                         android:textColor="@color/White"
                         android:textSize="20sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Type your answers to these grammar questions"
+                        android:textAlignment="center"
+                        android:textColor="@color/White"
+                        android:textSize="17sp" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -165,12 +184,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Fun games to help you with your learning!"
+        android:text="Fun games to help you with your learning! More options to come in future updates."
         android:textAlignment="center"
         android:textColor="@color/White"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/VideoTV"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.178" />
 </android.support.constraint.ConstraintLayout>
