@@ -17,7 +17,7 @@
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="11dp"
         android:alpha=".95"
-        android:background="@color/Green"
+        android:background="@color/Orange"
         android:src="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,6 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"></ImageView>
+
 
     <TextView
         android:id="@+id/TVScore"
@@ -66,34 +67,35 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="8dp"
-        android:text="00:30"
+        android:text="00:15"
         android:textColor="@color/White"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/TVQuestion"
+        app:layout_constraintBottom_toTopOf="@+id/TVVQuestion"
         app:layout_constraintEnd_toStartOf="@+id/rectimage"
-        app:layout_constraintHorizontal_bias="0.011"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/rectimage"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.159" />
 
     <TextView
-        android:id="@+id/TVQuestion"
+        android:id="@+id/TVVQuestion"
         android:layout_width="330dp"
         android:layout_height="111dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="8dp"
         android:text="Here will be the question text\nHere will be the question text\nHere will be the question text"
         android:textAlignment="center"
         android:textColor="@color/White"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TVScore" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="115dp"
+        android:layout_width="201dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -102,11 +104,12 @@
         app:layout_constraintBottom_toTopOf="@+id/BTSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVQuestion">
+        app:layout_constraintTop_toBottomOf="@+id/TVVQuestion"
+        app:layout_constraintVertical_bias="0.132">
 
         <RadioButton
             android:id="@+id/RB1"
-            android:layout_width="189dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Option 1"
             android:textAlignment="textStart"
@@ -117,7 +120,7 @@
 
         <RadioButton
             android:id="@+id/RB2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Option 2"
             android:textAlignment="textStart"
@@ -136,13 +139,27 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="56dp"
-        android:background="@color/PaleGreen"
+        android:background="@color/PaleOrange"
         android:text="Submit"
         app:layout_constraintBottom_toBottomOf="@+id/rectimage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TVQuestion"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/TVVQuestion"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Select the word that matches these:"
+        android:textColor="@color/White"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/TVVQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

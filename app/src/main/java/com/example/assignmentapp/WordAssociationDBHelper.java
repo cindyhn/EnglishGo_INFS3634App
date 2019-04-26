@@ -33,7 +33,8 @@ public class WordAssociationDBHelper extends SQLiteOpenHelper {
                 QuestionsTable.COLUMN_QUESTION + " TEXT, " +
                 QuestionsTable.COLUMN_OPTION1 + " TEXT, " +
                 QuestionsTable.COLUMN_OPTION2 + " TEXT, " +
-                QuestionsTable.COLUMN_ANSWER_NO + " INTEGER" +
+                QuestionsTable.COLUMN_ANSWER_NO + " INTEGER, " +
+                QuestionsTable.COLUMN_DIFFICULTY + " TEXT" +
                 ")";
 
         //Creating the database by executing the SQLite statements stated above
@@ -50,16 +51,36 @@ public class WordAssociationDBHelper extends SQLiteOpenHelper {
     //Creating question objects using WordAssociationQandA class
     //addQuestion method used to insert values into database
     private void fillQuestionsTable() {
-        WordAssociationQandA q1 = new WordAssociationQandA("Legacy, Family, Ethnic", "Gather", "Heritage", 2);
+        WordAssociationQandA q1 = new WordAssociationQandA("Legacy, Family, Ethnic", "Gather", "Heritage", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
         addQuestion(q1);
-        WordAssociationQandA q2 = new WordAssociationQandA("Small, Decrease, Reduction", "Minimise", "Convince", 1);
+        WordAssociationQandA q2 = new WordAssociationQandA("Small, Decrease, Reduction", "Minimise", "Convince", 1, WordAssociationQandA.DIFFICULTY_EASY);
         addQuestion(q2);
-        WordAssociationQandA q3 = new WordAssociationQandA("Fast, Quick, Prompt", "Swift", "Command", 1);
+        WordAssociationQandA q3 = new WordAssociationQandA("Fast, Quick, Prompt", "Swift", "Command", 1, WordAssociationQandA.DIFFICULTY_EASY);
         addQuestion(q3);
-        WordAssociationQandA q4 = new WordAssociationQandA("Make, Create, Factory", "Productive", "Rehabilitation", 1);
+        WordAssociationQandA q4 = new WordAssociationQandA("Make, Create, Factory", "Produce", "Rehabilitation", 1, WordAssociationQandA.DIFFICULTY_MEDIUM);
         addQuestion(q4);
-        WordAssociationQandA q5 = new WordAssociationQandA("Unfamiliar, Peculiar, Strange", "Unique", "Weird", 2);
+        WordAssociationQandA q5 = new WordAssociationQandA("Prepare, Setup, Organise", "Arrange", "Readily", 2, WordAssociationQandA.DIFFICULTY_EASY);
         addQuestion(q5);
+        WordAssociationQandA q6 = new WordAssociationQandA("Unfamiliar, Peculiar, Strange", "Unique", "Weird", 2, WordAssociationQandA.DIFFICULTY_EASY);
+        addQuestion(q6);
+        WordAssociationQandA q7 = new WordAssociationQandA("Money, Government, Hotel", "Pension", "Exposed", 2, WordAssociationQandA.DIFFICULTY_EASY);
+        addQuestion(q7);
+        WordAssociationQandA q8 = new WordAssociationQandA("Seller, Employee, Merchant", "Vendor", "Qualify", 2, WordAssociationQandA.DIFFICULTY_EASY);
+        addQuestion(q8);
+        WordAssociationQandA q9 = new WordAssociationQandA("Plan, Project, Scheme", "Arrangement", "Exclude", 2, WordAssociationQandA.DIFFICULTY_EASY);
+        addQuestion(q9);
+        WordAssociationQandA q10 = new WordAssociationQandA("Additional, Extra, Option", "Accessory", "Construct", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
+        addQuestion(q10);
+        WordAssociationQandA q11 = new WordAssociationQandA("Blood, Dose, Therapy", "Transfusion", "Cardiac", 1, WordAssociationQandA.DIFFICULTY_HARD);
+        addQuestion(q11);
+        WordAssociationQandA q12 = new WordAssociationQandA("Love, Attract, Charm", "Vigilance", "Tempt", 2, WordAssociationQandA.DIFFICULTY_MEDIUM);
+        addQuestion(q12);
+        WordAssociationQandA q13 = new WordAssociationQandA("Criticism, Explosive, Blast", "Fulminate", "Pediment", 1, WordAssociationQandA.DIFFICULTY_HARD);
+        addQuestion(q13);
+        WordAssociationQandA q14 = new WordAssociationQandA("Poverty, Poor, Tyrannize", "Penury", "Tyrannize", 1, WordAssociationQandA.DIFFICULTY_HARD);
+        addQuestion(q14);
+        WordAssociationQandA q15 = new WordAssociationQandA("Rural, Urban, Desolate", "Depopulate", "Stoicism", 1, WordAssociationQandA.DIFFICULTY_HARD);
+        addQuestion(q15);
     }
 
     //To insert the question into the database using ContentValues class
@@ -70,6 +91,8 @@ public class WordAssociationDBHelper extends SQLiteOpenHelper {
         cv.put(QuestionsTable.COLUMN_OPTION1, wordassociationqanda.getOption1());
         cv.put(QuestionsTable.COLUMN_OPTION2, wordassociationqanda.getOption2());
         cv.put(QuestionsTable.COLUMN_ANSWER_NO, wordassociationqanda.getAnswerNo());
+        cv.put(QuestionsTable.COLUMN_DIFFICULTY, wordassociationqanda.getDifficulty());
+
         db.insert(QuestionsTable.TABLE_NAME, null, cv);
     }
 
@@ -90,6 +113,8 @@ public class WordAssociationDBHelper extends SQLiteOpenHelper {
                 wordassociationqanda.setOption1(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION1)));
                 wordassociationqanda.setOption2(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION2)));
                 wordassociationqanda.setAnswerNo(c.getInt(c.getColumnIndex(QuestionsTable.COLUMN_ANSWER_NO)));
+                wordassociationqanda.setDifficulty(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_DIFFICULTY)));
+
 
                 //Pass question through the list
                 questionList.add(wordassociationqanda);
@@ -103,4 +128,42 @@ public class WordAssociationDBHelper extends SQLiteOpenHelper {
 
 
     }
+
+    //To make questions retrievable from other classes according to difficulty level
+    public List<WordAssociationQandA> getQuestions(String difficulty) {
+        List<WordAssociationQandA> questionList = new ArrayList<>();
+        db = getReadableDatabase();
+
+        //Getting questions from DB where difficulty level matches
+        String[] selectionArgs = new String[]{difficulty};
+        Cursor c = db.rawQuery("SELECT * FROM " + QuestionsTable.TABLE_NAME + " WHERE " + QuestionsTable.COLUMN_DIFFICULTY + " = ?", selectionArgs);
+
+        //Move cursor to the first entry
+        if (c.moveToFirst()) {
+            do {
+                //Create question object
+                WordAssociationQandA wordassociationqanda = new WordAssociationQandA();
+
+                //Fill question object with data out of the DB using column index names rather than hardcoding numbers
+                wordassociationqanda.setQuestion(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_QUESTION)));
+                wordassociationqanda.setOption1(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION1)));
+                wordassociationqanda.setOption2(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_OPTION2)));
+                wordassociationqanda.setAnswerNo(c.getInt(c.getColumnIndex(QuestionsTable.COLUMN_ANSWER_NO)));
+                wordassociationqanda.setDifficulty(c.getString(c.getColumnIndex(QuestionsTable.COLUMN_DIFFICULTY)));
+
+
+                //Pass question through the list
+                questionList.add(wordassociationqanda);
+
+            } while (c.moveToNext());
+        }
+
+        //Close cursor and return the question list
+        c.close();
+        return questionList;
+
+
+    }
+
+
 }

@@ -2,14 +2,20 @@
 <resources>
     <color name="colorPrimary">#03A9F4</color>
     <color name="colorPrimaryDark">#2A9FE4</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#2C2C2C</color>
     <color name="White">#FFFFFF</color>
     <color name="PaleBlue">#C1DEF8</color>
     <color name="DarkerBlue">#1E82E0</color>
     <color name="BGBlue">#2A9FE4</color>
     <color name="SplashBG">#5E9DFF</color>
-    <color name="Green">#59B34C</color>
+    <color name="Green">#5FC450</color>
     <color name="Purple">#8453E0</color>
     <color name="LightPurple">#D7C9F2</color>
     <color name="PaleGreen">#ACDFA9</color>
+    <color name="DarkerGreen">#20B10A</color>
+    <color name="Orange">#FF981A</color>
+    <color name="Yellow">#E8B714</color>
+    <color name="Red">#C40C1B</color>
+    <color name="PaleOrange">#FFB65D</color>
+    <color name="Pink">#D9185F</color>
 </resources>

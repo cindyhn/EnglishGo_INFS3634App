@@ -5,7 +5,9 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class WordAssociation extends AppCompatActivity {
@@ -13,10 +15,14 @@ public class WordAssociation extends AppCompatActivity {
     private static final int REQUEST_CODE_QUIZ = 1;
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String KEY_HIGHSCORE = "keyHighScore";
+    public static final String EXTRA_DIFFICULTY = "extraDifficulty";
 
     private TextView textHighScore;
 
     private int highscore;
+
+    private Spinner spinnerDifficulty;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,12 @@ public class WordAssociation extends AppCompatActivity {
 
         textHighScore = findViewById(R.id.TVHighscore);
         loadHighscore();
+
+        spinnerDifficulty = findViewById(R.id.SPDifficulty);
+        String[] difficultyLevels = WordAssociationQandA.getAllDifficultyLevels();
+        ArrayAdapter<String> adapterDifficulty = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, difficultyLevels);
+        adapterDifficulty.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDifficulty.setAdapter(adapterDifficulty);
 
         Button buttonStartQuiz = findViewById(R.id.BTPlay);
         buttonStartQuiz.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +49,11 @@ public class WordAssociation extends AppCompatActivity {
     }
 
     private void startQuiz() {
+        String difficulty = spinnerDifficulty.getSelectedItem().toString();
+
         Intent intent = new Intent(WordAssociation.this, WordAssociationQuestion.class);
+        intent.putExtra(EXTRA_DIFFICULTY, difficulty);
+
         //To send score value back from the Word Association Quiz Activity
         startActivityForResult(intent, REQUEST_CODE_QUIZ);
     }

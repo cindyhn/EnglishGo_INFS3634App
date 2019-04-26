@@ -15,10 +15,13 @@ public class QuizMenu extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.activity_quiz_menu);
 
         //Defining Cards
-        CardView wordasCard = findViewById(R.id.CVWordAssociation);
+        CardView cardWord = findViewById(R.id.CVWordAssociation);
+        CardView cardVocab = findViewById(R.id.CVVocab);
+
 
         //Setting onClick Listener
-        wordasCard.setOnClickListener(this);
+        cardWord.setOnClickListener(this);
+        cardVocab.setOnClickListener(this);
 
     }
 
@@ -34,6 +37,13 @@ public class QuizMenu extends AppCompatActivity implements View.OnClickListener 
                 startActivity(i);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 break;
+
+            case R.id.CVVocab:
+                i = new Intent(this, VocabQuiz.class);
+                startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                break;
+
             default:
                 break;
         }

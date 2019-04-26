@@ -3,6 +3,7 @@ package com.example.assignmentapp;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,10 +15,13 @@ import android.widget.Toast;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 public class WordAssociationQuestion extends AppCompatActivity {
 
     public static final String EXT_SCORE = "extraScore";
+
+    private static final long COUNTDOWN_IN_MILLIS = 15000;
 
     private TextView textQuestion;
     private TextView textScore;
@@ -31,7 +35,12 @@ public class WordAssociationQuestion extends AppCompatActivity {
     private Button buttonSubmit;
 
     private ColorStateList textColourDefault;
+    private ColorStateList textColourDefaultTimer;
+
     private List<WordAssociationQandA> questionList;
+
+    private CountDownTimer countDownTimer;
+    private long timeLeftInMillis;
 
     private int questionNo;
     private int questionTotal;
@@ -41,12 +50,14 @@ public class WordAssociationQuestion extends AppCompatActivity {
     private int score;
     private boolean answered;
 
+    private long backPressedTime;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_association_question);
 
-        textQuestion = findViewById(R.id.TVQuestion);
+        textQuestion = findViewById(R.id.TVVQuestion);
         textScore = findViewById(R.id.TVScore);
         textQuestionNo = findViewById(R.id.TVQuestionNo);
         textTimer = findViewById(R.id.TVTimer);
@@ -58,9 +69,10 @@ public class WordAssociationQuestion extends AppCompatActivity {
         buttonSubmit = findViewById(R.id.BTSubmit);
 
         textColourDefault = RB1.getTextColors();
+        textColourDefaultTimer = textTimer.getTextColors();
 
         WordAssociationDBHelper dbHelper = new WordAssociationDBHelper(this);
-        questionList = dbHelper.getAllQuestions();
+        questionList = dbHelper.getQuestions("Medium");
         questionTotal = questionList.size();
         Collections.shuffle(questionList);
 
@@ -100,6 +112,8 @@ public class WordAssociationQuestion extends AppCompatActivity {
             answered = false;
             buttonSubmit.setText("Submit");
 
+            timeLeftInMillis = COUNTDOWN_IN_MILLIS;
+            startCountDown();
 
         } else {
             finishWordAssociationQuiz();
@@ -107,8 +121,46 @@ public class WordAssociationQuestion extends AppCompatActivity {
         }
     }
 
+    private void startCountDown() {
+        countDownTimer = new CountDownTimer(timeLeftInMillis, 1000) {
+            @Override
+            //OnTick method will be called every second (because of the line above)
+            public void onTick(long millisUntilFinished) {
+                timeLeftInMillis = millisUntilFinished;
+                updateCountDownText();
+            }
+
+            @Override
+            public void onFinish() {
+                timeLeftInMillis = 0;
+                updateCountDownText();
+                checkAnswer();
+            }
+            //Start countdown timer when creating it
+        }.start();
+    }
+
+    private void updateCountDownText() {
+        int minutes = (int) (timeLeftInMillis / 1000) / 60;
+        int seconds = (int) (timeLeftInMillis / 1000) % 60;
+
+        String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
+
+        textTimer.setText(timeFormatted);
+
+        if (timeLeftInMillis < 5000) {
+            textTimer.setTextColor(Color.RED);
+        } else {
+            textTimer.setTextColor(textColourDefaultTimer);
+        }
+    }
+
+
     private void checkAnswer() {
         answered = true;
+
+        //Stop the timer
+        countDownTimer.cancel();
 
         RadioButton rbSelected = findViewById(radioGroup.getCheckedRadioButtonId());
         int answerNr = radioGroup.indexOfChild(rbSelected) + 1;
@@ -128,12 +180,12 @@ public class WordAssociationQuestion extends AppCompatActivity {
         switch (currentQuestion.getAnswerNo()) {
             case 1:
                 RB1.setTextColor(Color.GREEN);
-                textQuestion.setText("Answer 1 is correct");
+              //  textQuestion.setText("Answer 1 is correct");
                 break;
 
             case 2:
                 RB2.setTextColor(Color.GREEN);
-                textQuestion.setText("Answer 2 is correct");
+              //  textQuestion.setText("Answer 2 is correct");
                 break;
         }
 
@@ -153,4 +205,27 @@ public class WordAssociationQuestion extends AppCompatActivity {
         setResult(RESULT_OK, resultIntent);
         finish();
         }
+
+
+        @Override
+        public void onBackPressed() {
+        //If back button pressed twice within 2 seconds, finish quiz activity
+            if (backPressedTime + 2000 > System.currentTimeMillis()) {
+                finishWordAssociationQuiz();
+            } else {
+                //If back button is pressed, display a toas
+                Toast.makeText(this, "Press back again to finish", Toast.LENGTH_SHORT).show();
+            }
+
+            backPressedTime = System.currentTimeMillis();
+        }
+
+        @Override
+        //Method when timer runs out
+        protected void onDestroy() {
+        super.onDestroy();
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
     }
+}

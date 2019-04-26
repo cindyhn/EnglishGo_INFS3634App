@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WordAssociationQuestion"></activity>
+        <activity android:name=".VocabQuizQuestion"></activity>
+        <activity android:name=".VocabQuiz" />
+        <activity android:name=".WordAssociationQuestion" />
         <activity android:name=".WordAssociation" />
         <activity android:name=".VideoMenu" />
         <activity
@@ -48,7 +50,6 @@
             android:name=".ReadingVideos.ReadingVideos"
             android:screenOrientation="portrait" />
         <activity android:name=".ReadingVideos.ReadingVideos_Resources_Menu" />
-
     </application>
 
 </manifest>

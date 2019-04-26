@@ -12,5 +12,7 @@ public final class WordAssociationContainer {
         public static final String COLUMN_OPTION1 = "option1";
         public static final String COLUMN_OPTION2 = "option2";
         public static final String COLUMN_ANSWER_NO = "answerno";
+        public static final String COLUMN_DIFFICULTY = "difficulty";
+
     }
 }

@@ -5,19 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/skybg"
-    tools:context=".WordAssociation">
+    tools:context=".VocabQuiz">
 
 
     <ImageView
         android:id="@+id/rectimage"
         android:layout_width="403dp"
-        android:layout_height="644dp"
+        android:layout_height="640dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="9dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="11dp"
         android:alpha=".95"
-        android:background="@color/Orange"
+        android:background="@color/Yellow"
         android:src="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
         android:layout_height="37dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Word Association"
+        android:text="Vocabulary"
         android:textAlignment="center"
         android:textColor="@color/White"
         android:textSize="30sp"
@@ -50,7 +50,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Simply pick the word that matches the words provided!"
+        android:text="Input your answer to the vocab and grammar question!"
         android:textAlignment="center"
         android:textColor="@color/White"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +65,7 @@
         android:layout_marginTop="416dp"
         android:layout_marginEnd="8dp"
         android:text="PLAY"
-        android:textColor="@color/Orange"
+        android:textColor="@color/Yellow"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -75,7 +75,7 @@
     <TextView
         android:id="@+id/TVHighscore"
         android:layout_width="177dp"
-        android:layout_height="29dp"
+        android:layout_height="21dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
@@ -91,41 +91,5 @@
         app:layout_constraintTop_toBottomOf="@+id/BTPlay"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Spinner
-        android:id="@+id/SPDifficulty"
-        android:layout_width="152dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="36dp"
-        android:background="@color/PaleOrange"
-        android:popupBackground="@color/PaleOrange"
-        app:layout_constraintBottom_toTopOf="@+id/BTPlay"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/TVDifficulty"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="348dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="Select Mode:"
-        android:textAllCaps="true"
-        android:textColor="@color/White"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/BTPlay"
-        app:layout_constraintEnd_toStartOf="@+id/SPDifficulty"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

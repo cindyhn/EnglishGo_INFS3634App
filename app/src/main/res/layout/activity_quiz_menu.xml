@@ -76,7 +76,7 @@
                 android:background="@color/LightPurple"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/PaleGreen"
+                app:cardBackgroundColor="@color/Orange"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
@@ -96,6 +96,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Word Association"
+                        android:textColor="@color/White"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
@@ -117,44 +118,7 @@
             app:layout_constraintTop_toBottomOf="@+id/topRow">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/CVReading"
-                android:layout_width="0dp"
-                android:layout_height="210dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/PaleGreen"
-                app:cardCornerRadius="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="74dp"
-                        android:layout_height="81dp"
-                        android:padding="10dp"
-                        android:src="@drawable/read" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Reading"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/CVWriting"
+                android:id="@+id/CVVocab"
                 android:layout_width="0dp"
                 android:layout_height="210dp"
                 android:layout_marginLeft="5dp"
@@ -163,7 +127,7 @@
                 android:layout_weight="1"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/PaleGreen"
+                app:cardBackgroundColor="@color/Yellow"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
@@ -182,8 +146,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Writing"
-                        android:textSize="18sp"
+                        android:text="Vocabulary"
+                        android:textColor="@color/White"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>

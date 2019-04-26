@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/skybg"
+    tools:context=".VocabQuizQuestion">
+
+    <ImageView
+        android:id="@+id/rectimage"
+        android:layout_width="399dp"
+        android:layout_height="644dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="11dp"
+        android:alpha=".95"
+        android:background="@color/Yellow"
+        android:src="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"></ImageView>
+
+
+    <TextView
+        android:id="@+id/TVQuestionNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TVScore"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:text="Testing your grammar skills!"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rectimage" />
+
+    <TextView
+        android:id="@+id/TVVQuestion"
+        android:layout_width="330dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="Here will be the question text\nHere will be the question text\nHere will be the question text"
+        android:textAlignment="center"
+        android:textColor="@color/White"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVQuestionNo" />
+
+    <Button
+        android:id="@+id/BTVSubmit"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="194dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="56dp"
+        android:background="@color/Orange"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="@+id/rectimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVVQuestion"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <EditText
+        android:id="@+id/ETAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Answer"
+        android:inputType="textPersonName"
+        android:textColor="@color/White"
+        app:layout_constraintBottom_toTopOf="@+id/BTVSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVVQuestion"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
