@@ -35,26 +35,26 @@ public class ListeningVideos_Resources_Menu extends AppCompatActivity {
         listView.setOnItemClickListener(playVideo);
     }
 
-    //set an listener for the video thumbnails to play
+    //Set an listener for the video to play
     AdapterView.OnItemClickListener playVideo = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-            //made a copy the array to get the details
+            //A copy of the array to get details
             ArrayList<ListeningVideoDetails> videoDetails = ListeningVideoDetails.getMyVideos();
 
-            //Get the name of the video (Test)
+            //Gets the name and url of the video
             String title = videoDetails.get(position).getVideoTitle();
             String url = videoDetails.get(position).getVideoUrl();
 
             Log.d(TAG, "onItemClick: Playing video " + title);
             Toast.makeText(ListeningVideos_Resources_Menu.this, title, Toast.LENGTH_SHORT).show();
 
-            //creates an intent for both the youtube app and default browser if no youtube app is available
+            //Creates an intent for both the youtube app and default browser if no youtube app is available
             Intent youtubeIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtube.com/watch?v=" + url)); //I swapped youtubeIntent and altIntent around
             Intent altIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + url));
 
-            //runs one or the other based on what is available via a try-catch block
+            //Runs one or the other above based on what is available via a try-catch block
             try {
                 startActivity(youtubeIntent);
             } catch (ActivityNotFoundException e){
@@ -63,7 +63,7 @@ public class ListeningVideos_Resources_Menu extends AppCompatActivity {
         }
     };
 
-    //takes it back to the VideoMenu, rather than youtube Home
+    //Takes user back to the VideoMenu, rather than YouTube Home
     public void onBackPressed() {
         Intent intent = new Intent(this, VideoMenu.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

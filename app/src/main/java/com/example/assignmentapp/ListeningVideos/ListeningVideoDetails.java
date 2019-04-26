@@ -35,7 +35,7 @@ public class ListeningVideoDetails {
     }
 
 
-    //array list containing the video and details
+    //Array list containing video details and url
     private static ArrayList<ListeningVideoDetails> myVideos = new ArrayList<ListeningVideoDetails>() {{
         add(new ListeningVideoDetails(1, "Advanced Listening English Conversation - Listening English Lesson 1", "vBkqn0RpbUk"));
         add(new ListeningVideoDetails(2, "Advanced Listening English Conversation - Listening English Lesson 2", "H0ziWyTLd_c"));
@@ -48,12 +48,12 @@ public class ListeningVideoDetails {
 
     }};
 
-    //getter for the array
+    //Getter method for the array
     public static ArrayList<ListeningVideoDetails> getMyVideos() {
         return myVideos;
     }
 
-    // getter for a specific item by index
+    //Getter method for a specific index item in the array
     public static ListeningVideoDetails getVideoById(int id) {
         for (ListeningVideoDetails video : myVideos) {
             if(video.getVideoId() == id) {

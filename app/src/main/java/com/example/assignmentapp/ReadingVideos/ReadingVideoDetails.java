@@ -35,7 +35,7 @@ public class ReadingVideoDetails {
     }
 
 
-    //array list containing the video and details
+    //Array list containing video details and url
     private static ArrayList<ReadingVideoDetails> myVideos = new ArrayList<ReadingVideoDetails>() {{
         add(new ReadingVideoDetails(1, "English Passages for Reading and Listening", "t5qrRALIyko"));
         add(new ReadingVideoDetails(2, "Reading and Understanding - practice English", "HIFzQdKcGNg"));
@@ -47,12 +47,12 @@ public class ReadingVideoDetails {
         add(new ReadingVideoDetails(8, "TOEFL Practice Test - Reading Section (2019)", "72iwMaJ_ScI"));
     }};
 
-    //getter for the array
+    //Getter method for the array
     public static ArrayList<ReadingVideoDetails> getMyVideos() {
         return myVideos;
     }
 
-    // getter for a specific item by index
+    //Getter method for a specific index item in the array
     public static ReadingVideoDetails getVideoById(int id) {
         for (ReadingVideoDetails video : myVideos) {
             if(video.getVideoId() == id) {
