@@ -37,9 +37,14 @@ public class WritingVideoDetails {
 
     //array list containing the video and details
     private static ArrayList<com.example.assignmentapp.WritingVideos.WritingVideoDetails> myVideos = new ArrayList<com.example.assignmentapp.WritingVideos.WritingVideoDetails>() {{
-        add(new com.example.assignmentapp.WritingVideos.WritingVideoDetails(1, "Testing writing", "vBkqn0RpbUk&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi"));
-        add(new com.example.assignmentapp.WritingVideos.WritingVideoDetails(2, "Advanced Listening English Conversation - Listening English Lesson 2", "H0ziWyTLd_c&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi&index=2"));
-        add(new com.example.assignmentapp.WritingVideos.WritingVideoDetails(3, "Advanced Listening English Conversation - Listening English Lesson 3", "_hkIVzHTDek&list=PLTyvAtj9OYb2MCo7KLhXP49vHCCFxBbEi&index=3"));
+        add(new WritingVideoDetails(1, "5 tips to improve your writing", "GgkRoYPLhts"));
+        add(new WritingVideoDetails(2, "Learn English Grammar: The Sentence", "4dr5lN1jqRE"));
+        add(new WritingVideoDetails(3, "The 4 English Sentence Types – simple, compound, complex, compound-complex", "urr55rAreWc"));
+        add(new WritingVideoDetails(4, "Writing Skills: The Paragraph", "0IFDuhdB2Hk"));
+        add(new WritingVideoDetails(5, "How to write a good essay: Paraphrasing the question", "o9aVjBHEEbU"));
+        add(new WritingVideoDetails(6, "How to Improve Your English Writing - English Writing Lesson", "VgTqZOZ1UMQ"));
+        add(new WritingVideoDetails(7, "English Sentence Structure - English Grammar Lesson", "jul2urONzOQ"));
+        add(new WritingVideoDetails(8, "How to Improve English Grammar - Tips to Learn English Grammar Faster", "A5uz6LWeLPM"));
     }};
 
     //getter for the array

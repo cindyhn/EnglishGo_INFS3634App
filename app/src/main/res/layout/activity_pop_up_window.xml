@@ -17,7 +17,7 @@
         android:paddingLeft="16dp"
         android:paddingTop="20dp"
         android:paddingRight="16dp"
-        android:text="This application was created by Apex Consulting to help non-native speakers to learn English."
+        android:text="EnglishGo! aims to provide an integrated learning platform for individuals sitting English proficiency examinations through a gamified application experience that encourages improved examination outcomes. "
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold" />

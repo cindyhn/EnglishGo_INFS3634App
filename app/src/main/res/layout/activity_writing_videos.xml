@@ -28,7 +28,7 @@
 
     <ImageView
         android:id="@+id/thumbnail"
-        android:layout_width="110dp"
+        android:layout_width="144dp"
         android:layout_height="110dp"
         android:layout_margin="5dp"
         android:layout_marginStart="8dp"
@@ -37,20 +37,19 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="@+id/rectimage"
         app:layout_constraintEnd_toStartOf="@+id/videoTitle"
-        app:layout_constraintHorizontal_bias="0.727"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/rectimage"
-        app:srcCompat="@drawable/headphones"/>
+        app:layout_constraintTop_toTopOf="@+id/rectimage" />
 
     <TextView
         android:id="@+id/videoTitle"
-        android:layout_width="248dp"
+        android:layout_width="220dp"
         android:layout_height="110dp"
         android:layout_marginEnd="16dp"
         android:text="Title"
-        android:textColor="#000000"
+        android:textAlignment="viewStart"
+        android:textColor="@color/White"
         android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/rectimage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/rectimage" />

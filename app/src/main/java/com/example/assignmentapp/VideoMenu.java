@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
+import com.example.assignmentapp.ListeningVideos.ListeningVideoAdapter;
 import com.example.assignmentapp.ListeningVideos.ListeningVideos_Resources_Menu;
 import com.example.assignmentapp.ReadingVideos.ReadingVideos_Resources_Menu;
 import com.example.assignmentapp.SpeakingVideos.SpeakingVideos_Resources_Menu;
@@ -68,5 +69,14 @@ public class VideoMenu extends AppCompatActivity implements View.OnClickListener
 
     }
 
+    //takes it back to HomeMenu
+    public void onBackPressed() {
+        Intent intent = new Intent(this, HomeMenu.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
 }
+
 
