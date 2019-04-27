@@ -199,8 +199,10 @@ public class WordAssociationQuestion extends AppCompatActivity {
                 break;
         }
 
+        //Make the button say 'next question' if there is a question
+        //Or set it to Finish when the user is finished with their 5 questions
         if (questionNo < questionTotal) {
-            buttonSubmit.setText("Next");
+            buttonSubmit.setText("Next Question");
         } else {
             buttonSubmit.setText("Finish");
         }

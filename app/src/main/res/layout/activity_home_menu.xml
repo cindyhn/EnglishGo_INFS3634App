@@ -39,12 +39,13 @@
 
                 <TextView
                     android:id="@+id/QuizTitle"
-                    android:layout_width="246dp"
+                    android:layout_width="303dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="16dp"
                     android:paddingTop="16dp"
                     android:paddingRight="16dp"
-                    android:text="Test your knowledge!"
+                    android:text="Test your knowledge"
+                    android:textAllCaps="true"
                     android:textColor="@color/White"
                     android:textSize="19sp"
                     android:textStyle="bold" />
@@ -87,6 +88,7 @@
                     android:paddingTop="16dp"
                     android:paddingRight="16dp"
                     android:text="Random Word"
+                    android:textAllCaps="true"
                     android:textColor="@color/White"
                     android:textSize="19sp"
                     android:textStyle="bold" />
@@ -127,6 +129,7 @@
                     android:paddingTop="16dp"
                     android:paddingRight="16dp"
                     android:text="Videos"
+                    android:textAllCaps="true"
                     android:textColor="@color/White"
                     android:textSize="19sp"
                     android:textStyle="bold" />

@@ -85,7 +85,7 @@ public class WordAssociation extends AppCompatActivity {
     private void loadHighscore() {
         SharedPreferences prefs = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         highscore = prefs.getInt(KEY_HIGHSCORE, 0);
-        textHighScore.setText("Current High Score: " + highscore);
+        textHighScore.setText("Current High Score: " + highscore + "/5");
     }
 
 

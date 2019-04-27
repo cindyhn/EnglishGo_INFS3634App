@@ -18,4 +18,6 @@
     <color name="Red">#C40C1B</color>
     <color name="PaleOrange">#FFB65D</color>
     <color name="Pink">#D9185F</color>
+    <color name="PalePink">#FF7CAC</color>
+    <color name="PaleYellow">#ECD075</color>
 </resources>
