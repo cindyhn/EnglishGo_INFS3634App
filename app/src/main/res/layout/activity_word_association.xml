@@ -63,7 +63,7 @@
         android:layout_width="122dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="416dp"
+        android:layout_marginTop="408dp"
         android:layout_marginEnd="8dp"
         android:text="PLAY"
         android:textColor="@color/Orange"
@@ -87,7 +87,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/rectimage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.106"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/VideoTV"
         app:layout_constraintVertical_bias="1.0" />
