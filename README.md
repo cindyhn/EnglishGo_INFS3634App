@@ -1,5 +1,5 @@
 # AssignmentApp
-An gamified learning application created by Cindy Nguyen, Susanna Chen and Natasha Tran
+EnglishGo! is a gamified learning application created by Cindy Nguyen, Susanna Chen and Natasha Tran for INFS3634.
 
 Main Features:
 - Quizzes (Word Association Quiz and a Grammar Quiz)
